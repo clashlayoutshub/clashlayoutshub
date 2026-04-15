@@ -96,6 +96,8 @@ Return ONLY valid JSON — no markdown fences, no prose before or after, no extr
   "title": "SEO-optimized title, max 65 characters",
   "slug": "url-friendly-lowercase-slug-with-dashes-only",
   "description": "compelling SEO meta description, maximum 155 characters — do not cut off mid-sentence",
+  "seoTitle": "catchy SEO title for search results, maximum 60 characters — include primary keywords and make it compelling for click-through",
+  "metaDescription": "compelling meta description for search results, maximum 150 characters — include key benefits and keywords, complete sentences only",
   "author": "ClashLayoutsHub Team",
   "category": "choose the single best fit from EXACTLY these options: Strategy | Base Design | Attack Guide | Defense | Update",
   "tags": ["tag1", "tag2", "tag3", "tag4", "tag5", "tag6"],

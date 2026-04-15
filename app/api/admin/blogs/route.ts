@@ -13,6 +13,8 @@ function toRow(body: Partial<BlogPost>) {
     ...(body.slug        && { slug:           body.slug }),
     ...(body.title       && { title:          body.title }),
     ...(body.description && { description:    body.description }),
+    ...(body.seoTitle    && { seo_title:      body.seoTitle }),
+    ...(body.metaDescription && { meta_description: body.metaDescription }),
     ...(body.featuredImage && { featured_image: body.featuredImage }),
     ...(body.content !== undefined && { content:     body.content }),
     ...(body.tags    !== undefined && { tags:        body.tags }),

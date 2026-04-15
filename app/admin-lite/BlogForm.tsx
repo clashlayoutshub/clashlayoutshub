@@ -20,6 +20,8 @@ interface FormData {
   slug:          string;
   featuredImage: string;
   description:   string;
+  seoTitle:      string;
+  metaDescription: string;
   author:        string;
   publishedAt:   string;
   tags:          string;
@@ -152,6 +154,8 @@ export default function BlogForm({ authHeader, onSaved, onClose, showToast, edit
         slug:          typeof row.slug  === 'string' ? row.slug : '',
         featuredImage: (row.featured_image ?? row.featuredImage) as string ?? '',
         description:   typeof row.description === 'string' ? row.description : '',
+        seoTitle:      typeof row.seo_title === 'string' ? row.seo_title : '',
+        metaDescription: typeof row.meta_description === 'string' ? row.meta_description : '',
         author:        typeof row.author  === 'string' ? row.author : 'ClashLayoutsHub Team',
         publishedAt:   typeof row.published_at === 'string' ? row.published_at.slice(0, 10) : today,
         tags:          Array.isArray(row.tags) ? (row.tags as string[]).join(', ') : (row.tags as string ?? ''),
@@ -164,6 +168,8 @@ export default function BlogForm({ authHeader, onSaved, onClose, showToast, edit
       slug:          '',
       featuredImage: '',
       description:   '',
+      seoTitle:      '',
+      metaDescription: '',
       author:        'ClashLayoutsHub Team',
       publishedAt:   today,
       tags:          '',
@@ -224,6 +230,16 @@ export default function BlogForm({ authHeader, onSaved, onClose, showToast, edit
         ? d.description.trim().slice(0, 155)
         : form.description;
 
+      // SEO Meta Title (max 60 chars)
+      const newSeoTitle = typeof d.seoTitle === 'string'
+        ? d.seoTitle.trim().slice(0, 60)
+        : (typeof d.seo_title === 'string' ? d.seo_title.trim().slice(0, 60) : form.seoTitle);
+
+      // Meta Description (max 150 chars)
+      const newMetaDesc = typeof d.metaDescription === 'string'
+        ? d.metaDescription.trim().slice(0, 150)
+        : (typeof d.meta_description === 'string' ? d.meta_description.trim().slice(0, 150) : form.metaDescription);
+
       // Category — robust: handle pipes, prefixes, multi-word variants
       const newCat: BlogCategory = typeof d.category === 'string'
         ? (parseCategory(d.category) ?? form.category)
@@ -244,6 +260,8 @@ export default function BlogForm({ authHeader, onSaved, onClose, showToast, edit
         title:       newTitle,
         slug:        newSlug,
         description: newDesc  || f.description,
+        seoTitle:    newSeoTitle || f.seoTitle,
+        metaDescription: newMetaDesc || f.metaDescription,
         author:      typeof d.author === 'string' ? d.author.trim() : f.author,
         category:    newCat,
         tags:        newTags  || f.tags,
@@ -269,6 +287,8 @@ export default function BlogForm({ authHeader, onSaved, onClose, showToast, edit
         slug:          form.slug.trim(),
         title:         form.title.trim(),
         description:   form.description.trim(),
+        seoTitle:      form.seoTitle.trim(),
+        metaDescription: form.metaDescription.trim(),
         featuredImage: form.featuredImage.trim(),
         content:       form.content,
         category:      form.category,
@@ -402,6 +422,45 @@ export default function BlogForm({ authHeader, onSaved, onClose, showToast, edit
               placeholder="Discover the best TH14 war bases for 2026…"
               className={`${INPUT} resize-none`}
             />
+          </div>
+
+          {/* SEO Meta Title */}
+          <div>
+            <div className="flex items-baseline justify-between mb-1">
+              <label className={LABEL} style={{ marginBottom: 0 }}>SEO Meta Title</label>
+              <span className={`text-xs ${form.seoTitle.length > 60 ? 'text-red-500 font-semibold' : 'text-brand-muted'}`}>
+                {form.seoTitle.length}/60
+              </span>
+            </div>
+            <input
+              type="text"
+              value={form.seoTitle}
+              onChange={e => set('seoTitle', e.target.value)}
+              placeholder="Best TH14 War Base 2026 - Ultimate Guide"
+              maxLength={60}
+              autoComplete="off"
+              className={INPUT}
+            />
+            <p className="text-[10px] text-brand-muted mt-1">Catchy title for search results (max 60 characters)</p>
+          </div>
+
+          {/* Meta Description */}
+          <div>
+            <div className="flex items-baseline justify-between mb-1">
+              <label className={LABEL} style={{ marginBottom: 0 }}>Meta Description</label>
+              <span className={`text-xs ${form.metaDescription.length > 150 ? 'text-red-500 font-semibold' : 'text-brand-muted'}`}>
+                {form.metaDescription.length}/150
+              </span>
+            </div>
+            <textarea
+              rows={2}
+              value={form.metaDescription}
+              onChange={e => set('metaDescription', e.target.value)}
+              placeholder="Discover the ultimate TH14 war base for 2026. Anti-3 star design with optimal placement…"
+              maxLength={150}
+              className={`${INPUT} resize-none`}
+            />
+            <p className="text-[10px] text-brand-muted mt-1">Compelling description for search results (max 150 characters)</p>
           </div>
 
           {/* Author + Published At */}
