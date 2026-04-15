@@ -27,6 +27,12 @@ export default function AdUnit({
 }: AdUnitProps) {
   const adSize = AD_SIZES[format];
   const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+  const showAds = process.env.NEXT_PUBLIC_SHOW_ADS === 'true';
+
+  // Don't render anything if ads are disabled
+  if (!showAds) {
+    return null;
+  }
 
   return (
     <div className={`ad-unit-container my-8 ${className}`} data-ad-slot={slot}>
