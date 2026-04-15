@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Calendar, User, ArrowLeft, ChevronRight, CheckCircle, XCircle, List } from 'lucide-react';
+import ReactMarkdown from 'react-markdown';
 import Breadcrumb from '@/components/Breadcrumb';
 import AdUnit from '@/components/AdUnit';
 import BlogCard from '@/components/BlogCard';
@@ -57,52 +58,56 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
     day: 'numeric',
   });
 
-  const paragraphs = blog.content
-    .trim()
+  // Extract headings for ToC from markdown content
+  const tocHeadings = blog.content
     .split('\n')
-    .filter((line) => line.trim() !== '');
-
-  // Extract headings for ToC (excluding Table of Contents itself)
-  const tocHeadings = paragraphs
-    .filter((line) => line.startsWith('## ') && !line.startsWith('## Table of Contents'))
+    .filter((line) => line.startsWith('## ') && !line.includes('Table of Contents'))
     .map((line) => ({
-      title: line.slice(3).trim(),
-      id: line.slice(3).trim().toLowerCase().replace(/[^a-z0-9\s]/g, '').replace(/\s+/g, '-'),
+      title: line.slice(2).trim(),
+      id: line.slice(2).trim().toLowerCase().replace(/[^a-z0-9\s]/g, '').replace(/\s+/g, '-'),
     }));
 
   // Extract Pros & Cons section
   let prosCons: { pros: string[]; cons: string[] } | null = null;
-  let inPros = false;
-  let inCons = false;
   const pros: string[] = [];
   const cons: string[] = [];
 
-  for (const line of paragraphs) {
-    if (line.startsWith('## Pros & Cons')) {
+  const lines = blog.content.split('\n');
+  let inPros = false;
+  let inCons = false;
+
+  for (const line of lines) {
+    if (line.includes('Pros & Cons')) {
       inPros = false;
       inCons = false;
       continue;
     }
-    if (line.startsWith('**Pros:**')) {
+    if (line.includes('**Pros:**') || line.includes('Pros:')) {
       inPros = true;
       inCons = false;
       continue;
     }
-    if (line.startsWith('**Cons:**')) {
+    if (line.includes('**Cons:**') || line.includes('Cons:')) {
       inPros = false;
       inCons = true;
       continue;
     }
-    if (inPros && line.startsWith('- ')) {
-      pros.push(line.slice(2).replace(/✅/g, '').trim());
+    if (inPros && line.trim().startsWith('-')) {
+      pros.push(line.trim().slice(1).replace(/✅/g, '').trim());
     }
-    if (inCons && line.startsWith('- ')) {
-      cons.push(line.slice(2).replace(/❌/g, '').trim());
+    if (inCons && line.trim().startsWith('-')) {
+      cons.push(line.trim().slice(1).replace(/❌/g, '').trim());
     }
   }
   if (pros.length > 0 || cons.length > 0) {
     prosCons = { pros, cons };
   }
+
+  // Remove Pros & Cons section from main content
+  const contentWithoutProsCons = blog.content
+    .replace(/## Pros & Cons[\s\S]*?(?=## FAQ|$)/i, '')
+    .replace(/## Frequently Asked Questions[\s\S]*$/i, '')
+    .replace(/## FAQ[\s\S]*$/i, '');
 
   return (
     <>
@@ -157,52 +162,21 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
             </div>
 
             {/* Content */}
-            <div className="prose prose-lg max-w-none mt-6 scroll-smooth">
-              {paragraphs.map((paragraph, i) => {
-                const headingId = paragraph.startsWith('## ')
-                  ? paragraph.slice(3).trim().toLowerCase().replace(/[^a-z0-9\s]/g, '').replace(/\s+/g, '-')
-                  : undefined;
-
-                // Skip Table of Contents heading (it's in the sidebar)
-                if (paragraph.startsWith('## Table of Contents')) {
-                  return null;
-                }
-                // Skip Pros & Cons section (it's shown as a card)
-                if (paragraph.startsWith('## Pros & Cons') || paragraph.startsWith('**Pros:**') || paragraph.startsWith('**Cons:**')) {
-                  return null;
-                }
-                // Skip pros/cons bullet points by checking if this line is in pros/cons section
-                let isInProsConsSection = false;
-                let prosIndex = paragraphs.findIndex(p => p.startsWith('## Pros & Cons') || p.startsWith('**Pros:**'));
-                let consIndex = paragraphs.findIndex(p => p.startsWith('**Cons:**'));
-                let faqIndex = paragraphs.findIndex(p => p.startsWith('## Frequently Asked Questions') || p.startsWith('## FAQ'));
-                if (prosIndex !== -1 && faqIndex !== -1) {
-                  isInProsConsSection = i > prosIndex && i < faqIndex;
-                }
-                if (isInProsConsSection && paragraph.startsWith('- ')) {
-                  return null;
-                }
-
-                if (paragraph.startsWith('## ')) {
-                  return <h2 key={i} id={headingId} className="scroll-mt-24">{paragraph.slice(3)}</h2>;
-                }
-                if (paragraph.startsWith('### ')) {
-                  return <h3 key={i} id={headingId} className="scroll-mt-24">{paragraph.slice(4)}</h3>;
-                }
-                if (paragraph.startsWith('**') && paragraph.endsWith('**')) {
-                  return <p key={i}><strong>{paragraph.slice(2, -2)}</strong></p>;
-                }
-                if (paragraph.startsWith('- ')) {
-                  return (
-                    <ul key={i}>
-                      {paragraph.split('\n').filter(l => l.startsWith('- ')).map((item, j) => (
-                        <li key={j}>{item.slice(2)}</li>
-                      ))}
-                    </ul>
-                  );
-                }
-                return <p key={i}>{paragraph}</p>;
-              })}
+            <div className="prose prose-lg prose-blue max-w-none mt-6 scroll-smooth">
+              <ReactMarkdown
+                components={{
+                  h2: ({ node, ...props }) => {
+                    const id = props.children?.toString()?.toLowerCase().replace(/[^a-z0-9\s]/g, '').replace(/\s+/g, '-') || '';
+                    return <h2 id={id} className="scroll-mt-24" {...props} />;
+                  },
+                  h3: ({ node, ...props }) => {
+                    const id = props.children?.toString()?.toLowerCase().replace(/[^a-z0-9\s]/g, '').replace(/\s+/g, '-') || '';
+                    return <h3 id={id} className="scroll-mt-24" {...props} />;
+                  },
+                }}
+              >
+                {contentWithoutProsCons}
+              </ReactMarkdown>
             </div>
 
             {/* Pros & Cons Card */}
