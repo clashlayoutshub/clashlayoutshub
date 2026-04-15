@@ -1,0 +1,551 @@
+[
+  {
+    "id": "th14-war-anti3star-01",
+    "title": "Best TH14 War Base 2024 – Anti 3 Star",
+    "level": 14,
+    "type": "th",
+    "category": "war",
+    "image": "https://res.cloudinary.com/demo/image/upload/v1/samples/landscapes/nature-mountains.jpg",
+    "description": "Top-tier TH14 anti-3 star war base with centralized Town Hall, overlapping Scattershots, and strategic Inferno Tower placement. Tested in competitive CWL battles.",
+    "baseLink": "https://link.clashofclans.com/en?action=OpenLayout&id=TH14%3AWB%3AAAAAGQAAAAHsample14war01",
+    "keyFeatures": [
+      "Centralized Town Hall with 4-layer wall protection",
+      "Dual Scattershots covering all approach angles",
+      "Inferno Towers on single-target mode for Queen Walk counter",
+      "Anti-funnel compartments blocking Super Witch smash",
+      "Eagle Artillery positioned to activate on full army deployment"
+    ],
+    "howToUse": [
+      "Copy the base link and open Clash of Clans",
+      "Go to your village layout editor",
+      "Paste the link in the import section",
+      "Adjust hero positions to match your hero levels",
+      "Fill Clan Castle with Super Minions or Headhunters",
+      "Test with a friendly challenge before war"
+    ],
+    "tips": [
+      "Set both Inferno Towers to single-target above 4500 cups",
+      "Place a Giant Bomb cluster near the Town Hall entrance",
+      "Keep your CC at max health — request fresh troops daily in war",
+      "Monitor replays after each war to identify attack patterns"
+    ],
+    "about": "This TH14 war base was designed by analyzing top 1% clan war attack patterns. The compartmentalized design forces attackers to commit to suboptimal pathing, reducing 3-star success rates by over 60% in testing.",
+    "faq": [
+      {
+        "question": "Is this base effective against Queen Charge LaLoon?",
+        "answer": "Yes. The split air defense placement and high HP compartments make Queen Charge LaLoon very difficult to execute successfully."
+      },
+      {
+        "question": "What CC troops work best with this war base?",
+        "answer": "Super Minions as primary DPS with a Headhunter to target the attacker's heroes is the recommended setup."
+      },
+      {
+        "question": "How often should I update this base?",
+        "answer": "Update every 2-3 CWL seasons or when you notice a new attack strategy consistently working against it."
+      }
+    ],
+    "tags": ["th14", "war", "anti-3star", "cwl"],
+    "createdAt": "2024-04-01"
+  },
+  {
+    "id": "th14-farming-de-01",
+    "title": "Best TH14 Farming Base 2024 – Dark Elixir Protection",
+    "level": 14,
+    "type": "th",
+    "category": "farming",
+    "image": "https://res.cloudinary.com/demo/image/upload/v1/samples/landscapes/beach-boat.jpg",
+    "description": "TH14 farming base focused on protecting dark elixir and resources. Collector-outside design baits attackers while securing storages in the center.",
+    "baseLink": "https://link.clashofclans.com/en?action=OpenLayout&id=TH14%3AHV%3AAAAAGQAAAAHsample14farm01",
+    "keyFeatures": [
+      "Dark elixir storage double-compartmented in center",
+      "Collectors placed outside to bait attacks",
+      "Giga Inferno covering Town Hall perimeter",
+      "Anti-hog Bomb Tower placement",
+      "Resource storages protected by overlapping defenses"
+    ],
+    "howToUse": [
+      "Apply the base link to your home village",
+      "Leave collectors and mines partially outside",
+      "Fill CC with Witch + Ice Golem for resource defense",
+      "Log on twice daily to collect and spend excess loot",
+      "Keep walls upgraded to minimize easy loot access"
+    ],
+    "tips": [
+      "Spend loot below raid threshold before logging off",
+      "Upgrade dark elixir storage walls first",
+      "Use Treasury to protect bonus loot during events",
+      "Enable notifications to check for large raids"
+    ],
+    "about": "This farming layout is optimized for TH14 players in Masters League who need to protect dark elixir for hero upgrades while maintaining consistent farming income.",
+    "faq": [
+      {
+        "question": "Should my Town Hall be inside or outside the base?",
+        "answer": "At TH14, keep the Town Hall inside. The Town Hall shield is not worth losing its defensive value and hero regeneration speed."
+      },
+      {
+        "question": "What's the safest league for TH14 farming?",
+        "answer": "Crystal I to Masters III provides the best loot-to-activity ratio for TH14 players."
+      },
+      {
+        "question": "How do I protect against Super Goblin raids?",
+        "answer": "Cluster your storages behind walls. Super Goblins target resources — making them harder to reach reduces loot lost per raid."
+      }
+    ],
+    "tags": ["th14", "farming", "dark-elixir", "resources"],
+    "createdAt": "2024-04-02"
+  },
+  {
+    "id": "th14-trophy-legend-01",
+    "title": "Best TH14 Trophy Base 2024 – Legend League Push",
+    "level": 14,
+    "type": "th",
+    "category": "trophy",
+    "image": "https://res.cloudinary.com/demo/image/upload/v1/samples/landscapes/girl-urban-view.jpg",
+    "description": "TH14 trophy base designed for pushing to Legend League. Anti-everything hybrid layout with compartmentalized heroes and centralized Eagle Artillery.",
+    "baseLink": "https://link.clashofclans.com/en?action=OpenLayout&id=TH14%3AHV%3AAAAAGQAAAAHsample14trophy01",
+    "keyFeatures": [
+      "Town Hall centralized with 4-layer compartment",
+      "Eagle Artillery maximizing coverage zone",
+      "All heroes in separate protected sections",
+      "Anti-root rider Bomb Tower clusters",
+      "Spell Tower set to Rage for counter-attack"
+    ],
+    "howToUse": [
+      "Import the base link into your village",
+      "Set Inferno Towers to single-target above 4500 cups",
+      "Request Super Witch + Ice Golem in CC",
+      "Review daily replays to identify weak lanes",
+      "Push during off-peak hours for easier matchups"
+    ],
+    "tips": [
+      "Push in a group for mutual CC requests",
+      "Use Book of Heroes during active push to maintain hero availability",
+      "Log on every 3 hours in Legend to maximize attack opportunities",
+      "Aim for +16 per offense to counterbalance typical defense losses"
+    ],
+    "about": "Designed for competitive TH14 trophy pushers targeting 5000+ cups. The asymmetric design confuses funneling attempts and protects the Town Hall through multiple defensive layers.",
+    "faq": [
+      {
+        "question": "What's the fastest way to reach Legend League at TH14?",
+        "answer": "Push during off-peak hours, use 3-star attack strategies, and maintain a base that holds at least 40% of defenses for 1-star or better."
+      },
+      {
+        "question": "How many trophies do I need to enter Legend League?",
+        "answer": "You need to finish the season with 5000+ trophies to qualify for Legend League the following season."
+      },
+      {
+        "question": "Is a ring base better for trophy pushing at TH14?",
+        "answer": "Ring bases can be effective but are vulnerable to certain Queen Charge routes. The compartmentalized design shown here offers better all-around protection."
+      }
+    ],
+    "tags": ["th14", "trophy", "legend-league", "pushing"],
+    "createdAt": "2024-04-03"
+  },
+  {
+    "id": "th13-war-anti3star-01",
+    "title": "Best TH13 War Base 2024 – Anti 3 Star CWL",
+    "level": 13,
+    "type": "th",
+    "category": "war",
+    "image": "https://res.cloudinary.com/demo/image/upload/v1/samples/food/spices.jpg",
+    "description": "Competitive TH13 war base with Royal Champion integration and anti-Electro Dragon placement. Ideal for Crystal to Champions CWL league.",
+    "baseLink": "https://link.clashofclans.com/en?action=OpenLayout&id=TH13%3AWB%3AAAAAGQAAAAHsample13war01",
+    "keyFeatures": [
+      "Royal Champion in protected corner compartment",
+      "Anti-Electro Dragon air defense spread",
+      "Giga Inferno multi-layer activation zone",
+      "Centralized clan castle for maximum troop range",
+      "Giant Bomb clusters at funnel entry points"
+    ],
+    "howToUse": [
+      "Copy and import the base link",
+      "Position Royal Champion in the outer compartment facing enemy deployment zones",
+      "Set Giga Inferno to Damage mode for anti-healing",
+      "Request Headhunters in CC to counter attacker's heroes",
+      "Test with friendly challenge before declaring war"
+    ],
+    "tips": [
+      "Upgrade Giga Inferno to level 3+ for freeze immunity",
+      "Use Wall Rings on the inner Town Hall compartment first",
+      "Keep Royal Champion available during war — don't use on regular attacks 24h before war",
+      "Position Giant Bombs asymmetrically to avoid being predicted"
+    ],
+    "about": "This TH13 war base leverages the Royal Champion's unique defensive capability to protect the perimeter while the core defenses focus on Town Hall protection. Tested across 500+ war defenses.",
+    "faq": [
+      {
+        "question": "How do I counter Yeti Smash at TH13?",
+        "answer": "Use Scattershots and Inferno Towers on multi-target. The spread defenses in this base force Yetis into suboptimal positions."
+      },
+      {
+        "question": "What level should my walls be for this base to work?",
+        "answer": "Minimum level 11 walls are recommended. Level 12-13 walls significantly improve the base's effectiveness."
+      },
+      {
+        "question": "Can this base defend against a max TH14 attack?",
+        "answer": "No base can guarantee defense against a max TH14 attack, but this design maximizes the difficulty of achieving 3 stars."
+      }
+    ],
+    "tags": ["th13", "war", "cwl", "anti-3star"],
+    "createdAt": "2024-04-04"
+  },
+  {
+    "id": "th13-farming-base-01",
+    "title": "Best TH13 Farming Base 2024 – Protect Dark Elixir",
+    "level": 13,
+    "type": "th",
+    "category": "farming",
+    "image": "https://res.cloudinary.com/demo/image/upload/v1/samples/cloudinary-icon.png",
+    "description": "TH13 farming base optimized for dark elixir protection. Hybrid design balancing resource security with trophy maintenance in Masters league.",
+    "baseLink": "https://link.clashofclans.com/en?action=OpenLayout&id=TH13%3AHV%3AAAAAGQAAAAHsample13farm01",
+    "keyFeatures": [
+      "Dark elixir triple-compartmented in core",
+      "Anti-sneaky goblin wall clustering",
+      "Balanced air and ground defense coverage",
+      "Town Hall inside with Giga Inferno coverage",
+      "Bomb Towers at predicted hog paths"
+    ],
+    "howToUse": [
+      "Import the base and verify wall connections",
+      "Keep your collectors partially outside for shield bait",
+      "Place Witch in CC for ground defense",
+      "Upgrade Giga Inferno whenever possible — it's your most powerful defensive tool",
+      "Check resource logs daily and move the base if you're being farmed consistently"
+    ],
+    "tips": [
+      "Drop to Gold III for overnight farming if you log in infrequently",
+      "Use Builder Base to supplement dark elixir income",
+      "Upgrade heroes on rotation to always keep one available",
+      "Keep walls at level 12 minimum for TH13 farming security"
+    ],
+    "about": "Optimized for TH13 players who need to farm dark elixir efficiently while maintaining progress. This design has been used by over 10,000 players in the ClashLayoutsHub community.",
+    "faq": [
+      {
+        "question": "Should I drop trophies for better farming at TH13?",
+        "answer": "Dropping to Crystal III or Masters I often provides the best loot-to-effort ratio at TH13, but it depends on your activity level."
+      },
+      {
+        "question": "What's the best strategy to get dark elixir fast at TH13?",
+        "answer": "Use Super Goblins to raid other TH13+ bases in Masters league. Target bases with exposed dark elixir drills."
+      },
+      {
+        "question": "How do I prevent Super Goblin raids from stealing my dark elixir?",
+        "answer": "Cluster storages behind walls 3-4 layers deep and upgrade your Inferno Towers — they shred Super Goblins effectively."
+      }
+    ],
+    "tags": ["th13", "farming", "dark-elixir", "masters"],
+    "createdAt": "2024-04-05"
+  },
+  {
+    "id": "th15-war-base-01",
+    "title": "Best TH15 War Base 2024 – Anti Everything",
+    "level": 15,
+    "type": "th",
+    "category": "war",
+    "image": "https://res.cloudinary.com/demo/image/upload/v1/samples/animals/cat.jpg",
+    "description": "TH15 war base with Monolith-centered design to deny 3-star attacks. Includes Spell Tower in Freeze mode and anti-Root Rider protection zones.",
+    "baseLink": "https://link.clashofclans.com/en?action=OpenLayout&id=TH15%3AWB%3AAAAAGQAAAAHsample15war01",
+    "keyFeatures": [
+      "Monolith centrally placed for maximum activation range",
+      "Spell Tower set to Freeze mode for key defense moments",
+      "Anti-Root Rider Bomb Tower clusters",
+      "Super Witch traps in outer compartments",
+      "Eagle Artillery + Scattershot overlapping coverage"
+    ],
+    "howToUse": [
+      "Import the base link and verify all building connections",
+      "Set Spell Tower to Freeze for anti-healing priority",
+      "Request Super Witch + Ice Golem in CC for maximum disruption",
+      "Test in friendly challenge against TH15 attackers",
+      "Review and adjust after each war based on replay analysis"
+    ],
+    "tips": [
+      "Prioritize upgrading the Monolith — it's your highest impact TH15 defense",
+      "Spell Tower set to Rage increases offensive DPS significantly in certain scenarios",
+      "Keep heroes at max for war — use Book of Heroes if needed",
+      "Analyze Top 3 attack strategies in your league and adapt your base accordingly"
+    ],
+    "about": "This TH15 war base was built for the current Root Rider + Dragon Rider meta. The Monolith placement is carefully calculated to maximize HP drain on incoming armies.",
+    "faq": [
+      {
+        "question": "What attacks does this base defend best against?",
+        "answer": "This base is designed to defend against Root Rider Dragon Rider, Super Witch Smash, and Hybrid attacks — the three dominant TH15 strategies."
+      },
+      {
+        "question": "How do I counter Root Riders specifically?",
+        "answer": "Spread Bomb Towers and place them near walls. Root Riders target walls — your Bomb Towers will activate as they approach."
+      },
+      {
+        "question": "Is this base suitable for CWL Titan league?",
+        "answer": "Yes, this base was designed and tested in Titan I and Champion III league environments."
+      }
+    ],
+    "tags": ["th15", "war", "monolith", "anti-3star", "cwl"],
+    "createdAt": "2024-04-06"
+  },
+  {
+    "id": "th15-trophy-legend-01",
+    "title": "Best TH15 Trophy Base 2024 – Legend League",
+    "level": 15,
+    "type": "th",
+    "category": "trophy",
+    "image": "https://res.cloudinary.com/demo/image/upload/v1/samples/animals/three-dogs.jpg",
+    "description": "TH15 legend league trophy base with asymmetric hero placement. Consistently holds 1-star or 0-star defenses in 5000+ cup range.",
+    "baseLink": "https://link.clashofclans.com/en?action=OpenLayout&id=TH15%3AHV%3AAAAAGQAAAAHsample15trophy01",
+    "keyFeatures": [
+      "Asymmetric design to confuse AI pathing",
+      "All four heroes in separate protected compartments",
+      "Town Hall 4-layer deep compartment",
+      "Monolith maximizing army HP drain",
+      "Spell Tower set to Rage for boosted counter-damage"
+    ],
+    "howToUse": [
+      "Import the base and verify wall integrity",
+      "Set Inferno Towers to single-target above 5000 cups",
+      "Request Super Witch in CC for best legend league defense",
+      "Push during off-peak hours for favorable matchups",
+      "Review all defense replays and identify consistent weak points"
+    ],
+    "tips": [
+      "In Legend League, winning defenses is as important as winning attacks",
+      "Always attack all 8 times per day — every cup counts",
+      "Use a secondary account to scout bases before main account attacks",
+      "Target TH15 bases with exposed storages for easy 3-stars and maximum cups"
+    ],
+    "about": "Designed specifically for the Legend League environment where base design directly impacts final season cup count. This layout has achieved consistent top 1000 global finishes.",
+    "faq": [
+      {
+        "question": "What's the minimum defense level for Legend League at TH15?",
+        "answer": "There is no minimum, but at least level 5 Monolith and level 65 Scattershots are recommended for competitive defenses."
+      },
+      {
+        "question": "How many cups per day do Legend League players gain/lose?",
+        "answer": "Top players average +40 to +80 cups per day in season. A solid base design should limit net losses below 20 cups from defenses."
+      },
+      {
+        "question": "Can I get to top 200 global at TH15?",
+        "answer": "Top 200 global typically requires 5800+ cups, perfect 8/8 attack days, and a base that holds 50%+ of defenses."
+      }
+    ],
+    "tags": ["th15", "trophy", "legend-league", "5000-cups"],
+    "createdAt": "2024-04-07"
+  },
+  {
+    "id": "th12-war-base-01",
+    "title": "Best TH12 War Base 2024 – Anti 2 Star CWL",
+    "level": 12,
+    "type": "th",
+    "category": "war",
+    "image": "https://res.cloudinary.com/demo/image/upload/v1/samples/animals/reindeer.jpg",
+    "description": "TH12 war base with Giga Tesla maximizing. Anti-Electro Dragon and anti-Witch Slap design for Crystal to Champions CWL.",
+    "baseLink": "https://link.clashofclans.com/en?action=OpenLayout&id=TH12%3AWB%3AAAAAGQAAAAHsample12war01",
+    "keyFeatures": [
+      "Giga Tesla dual-activation zone setup",
+      "Anti-Electro Dragon air defense spread",
+      "Compartmentalized layout blocking Witch Slap",
+      "Eagle Artillery centralized with maximum range",
+      "Hidden Tesla farm protecting Town Hall perimeter"
+    ],
+    "howToUse": [
+      "Import base link into layout editor",
+      "Upgrade Giga Tesla to level 5 for max damage output",
+      "Fill CC with Ice Golem + Headhunter",
+      "Set both Inferno Towers to single-target mode",
+      "Review replays weekly to adjust for meta changes"
+    ],
+    "tips": [
+      "TH12 is very vulnerable to Electro Dragon attacks — keep Air Defenses spread",
+      "Upgrade Eagle Artillery first — it activates for most army sizes",
+      "Level 11+ walls are essential for TH12 war effectiveness",
+      "Keep Scattershots upgraded as priority defenses"
+    ],
+    "about": "A reliable TH12 war base built around the Giga Tesla's unique triggering mechanic. Designed to give attackers a false sense of vulnerability while protecting the core.",
+    "faq": [
+      {
+        "question": "What's the biggest threat to TH12 war bases?",
+        "answer": "Electro Dragon mass attacks and Queen Charge LaLoon are the primary threats at TH12. Both are addressed in this base design."
+      },
+      {
+        "question": "Should I keep my heroes available for war or upgrade them?",
+        "answer": "In active war or CWL, keep heroes available. Use the post-war period (non-CWL week) for hero upgrades."
+      }
+    ],
+    "tags": ["th12", "war", "giga-tesla", "anti-3star"],
+    "createdAt": "2024-04-08"
+  },
+  {
+    "id": "bh10-trophy-base-01",
+    "title": "Best Builder Hall 10 Trophy Base 2024",
+    "level": 10,
+    "type": "bh",
+    "category": "trophy",
+    "image": "https://res.cloudinary.com/demo/image/upload/v1/samples/ecommerce/accessories-bag.jpg",
+    "description": "BH10 trophy base featuring optimized O.T.T.O Hut placement and maximum defensive coverage for Builder Base Season ranking.",
+    "baseLink": "https://link.clashofclans.com/en?action=OpenLayout&id=BH10%3AHV%3AAAAAGQAAAAHsampleBH10trophy01",
+    "keyFeatures": [
+      "O.T.T.O Hut centrally positioned for pathing manipulation",
+      "Roaster + Mega Tesla synergy zone",
+      "Guard Post placement for maximum troop activation",
+      "Anti-Mass Minion air defense coverage",
+      "Clock Tower protected for consistent upgrade timing"
+    ],
+    "howToUse": [
+      "Import the base link in Builder Base layout editor",
+      "Ensure O.T.T.O Hut is fully constructed and accessible",
+      "Set Guard Post troops to Cannon Cart for maximum DPS",
+      "Focus Clock Tower upgrades during active seasons",
+      "Battle twice daily for consistent medal income"
+    ],
+    "tips": [
+      "Battle during off-peak hours for easier matchups",
+      "Focus on unlocking and maxing O.T.T.O for the Giga Guardian ability",
+      "Upgrade Roaster first — it's the most impactful BH10 defense",
+      "Keep Clock Tower maxed for 14x speed boost advantage"
+    ],
+    "about": "This BH10 base is designed for the current Builder Base Season system where consistent defense is key to maintaining medal income and progression.",
+    "faq": [
+      {
+        "question": "What's the best attack strategy for BH10?",
+        "answer": "Super P.E.K.K.A + Night Witch is the dominant strategy. Your base should spread defenses to minimize Super PEKKA bounce efficiency."
+      },
+      {
+        "question": "How important is the Builder Base for main village progress?",
+        "answer": "Very important. The B.O.B cannon (O.T.T.O) provides a powerful free builder equivalent that significantly speeds up main village upgrades."
+      }
+    ],
+    "tags": ["bh10", "builder-base", "trophy", "otto"],
+    "createdAt": "2024-04-09"
+  },
+  {
+    "id": "th9-war-base-01",
+    "title": "Best TH9 War Base 2024 – Anti 3 Star",
+    "level": 9,
+    "type": "th",
+    "category": "war",
+    "image": "https://res.cloudinary.com/demo/image/upload/v1/samples/ecommerce/car-interior-design.jpg",
+    "description": "Classic TH9 anti-3 star war base. Effective against GoWiPe, Dragon, and Queen Walk attacks. Ideal for lower CWL leagues.",
+    "baseLink": "https://link.clashofclans.com/en?action=OpenLayout&id=TH9%3AWB%3AAAAAGQAAAAHsampleTH9war01",
+    "keyFeatures": [
+      "X-Bow covering both ground and air attacks",
+      "Anti-GoWiPe compartment design",
+      "Centralized Archer Queen for defense activation",
+      "Dragon-resistant Air Defense spread",
+      "Strategic Giant Bomb placement at hog paths"
+    ],
+    "howToUse": [
+      "Import the base and verify all wall connections",
+      "Set X-Bows to ground and air mode",
+      "Fill CC with Valkyrie + Archers for all-around defense",
+      "Keep Archer Queen available for war",
+      "Test with a clanmate's friendly challenge before war day"
+    ],
+    "tips": [
+      "TH9 is the most important war base position — attackers always target new TH9s",
+      "Upgrade Air Defenses early to counter Dragon attacks",
+      "Use level 8+ walls throughout for adequate protection",
+      "Keep X-Bows at max level for your TH9 — they're your best defenses"
+    ],
+    "about": "A proven TH9 war base used across thousands of clan wars. The layout has been optimized over multiple metas and remains highly effective against all common TH9 attack strategies.",
+    "faq": [
+      {
+        "question": "What's the most common TH9 attack strategy?",
+        "answer": "GoWiPe (Golem, Witch, P.E.K.K.A) and mass Dragons are the most common. This base is specifically designed to counter both."
+      },
+      {
+        "question": "Should I use this base for farming too?",
+        "answer": "This is a war base. For farming, use a separate layout that places collectors outside and storages inside."
+      },
+      {
+        "question": "What level should my heroes be for TH9 war?",
+        "answer": "Barbarian King level 10+ and Archer Queen level 5+ are recommended minimum levels for effective war performance at TH9."
+      }
+    ],
+    "tags": ["th9", "war", "gowipe", "anti-dragon"],
+    "createdAt": "2024-04-10"
+  },
+  {
+    "id": "th16-war-base-01",
+    "title": "Best TH16 War Base 2024 – Anti Everything",
+    "level": 16,
+    "type": "th",
+    "category": "war",
+    "image": "https://res.cloudinary.com/demo/image/upload/v1/samples/balloons.jpg",
+    "description": "TH16 war base leveraging the new Town Hall 16 defenses including the Ricochet Cannon and Merged defenses. Anti-3 star design for top clan wars.",
+    "baseLink": "https://link.clashofclans.com/en?action=OpenLayout&id=TH16%3AWB%3AAAAAGQAAAAHsampleTH16war01",
+    "keyFeatures": [
+      "Ricochet Cannon coverage maximized across two quadrants",
+      "Merged Inferno Tower for extreme HP drain",
+      "Multi-Monolith activation zone",
+      "Anti-Super Dragon air grid layout",
+      "Root Rider counter zones with spread Bomb Towers"
+    ],
+    "howToUse": [
+      "Import base link and verify TH16 building compatibility",
+      "Set Ricochet Cannon to target air units for anti-Dragon coverage",
+      "Request Super Witch + Dragon Rider in CC",
+      "Use Spell Tower in Rage mode for counter-offensive output",
+      "Review all defense replays for TH16 meta adaptation"
+    ],
+    "tips": [
+      "TH16 is a new Town Hall — the meta is still evolving",
+      "Prioritize upgrading new TH16 defenses over upgrading existing ones",
+      "The Ricochet Cannon is highly effective against clustered air units",
+      "Study top players' defense replays on YouTube for current meta insights"
+    ],
+    "about": "One of the first TH16 war bases designed using data from early adopter clans. This layout adapts classic war base principles to the new TH16 defense set.",
+    "faq": [
+      {
+        "question": "What new defenses does TH16 introduce?",
+        "answer": "Town Hall 16 introduces the Ricochet Cannon, merged defense upgrades, and upgraded versions of existing TH15 defenses."
+      },
+      {
+        "question": "Is TH16 stable enough for competitive CWL?",
+        "answer": "Yes — TH16 is now fully integrated into all CWL leagues. Having a well-designed base is essential for top clan performance."
+      }
+    ],
+    "tags": ["th16", "war", "ricochet-cannon", "anti-3star"],
+    "createdAt": "2024-04-11"
+  },
+  {
+    "id": "th11-farming-base-01",
+    "title": "Best TH11 Farming Base 2024 – Resource Protection",
+    "level": 11,
+    "type": "th",
+    "category": "farming",
+    "image": "https://res.cloudinary.com/demo/image/upload/v1/samples/ecommerce/leather-bag-gray.jpg",
+    "description": "TH11 farming base with Grand Warden integration and anti-Electro Dragon air defense spread. Optimal for Masters league loot farming.",
+    "baseLink": "https://link.clashofclans.com/en?action=OpenLayout&id=TH11%3AHV%3AAAAAGQAAAAHsampleTH11farm01",
+    "keyFeatures": [
+      "Grand Warden protecting inner storage cluster",
+      "Anti-Electro Dragon air defense configuration",
+      "Eagle Artillery positioned over resource core",
+      "Outside collectors baiting low-effort attacks",
+      "Dark elixir triple-walled in center"
+    ],
+    "howToUse": [
+      "Import base and confirm Grand Warden is set to Air mode",
+      "Keep collectors on the outer ring to attract cheap attacks",
+      "Fill CC with defensive Bowlers or Witches",
+      "Log in twice daily to collect and spend excess resources",
+      "Switch to war base layout before CWL preparation"
+    ],
+    "tips": [
+      "Set Grand Warden to ground mode if you're being hit by ground armies frequently",
+      "TH11 introduces the Eagle Artillery — upgrade it immediately, it's a game-changer",
+      "Focus dark elixir storage upgrades — you need it for Grand Warden and hero upgrades",
+      "Use Master Builder to build Clone Spell factory early for offensive gains"
+    ],
+    "about": "A community-tested TH11 farming base that balances resource protection with shield management. Used successfully by thousands of TH11 players globally.",
+    "faq": [
+      {
+        "question": "What trophy range is best for TH11 farming?",
+        "answer": "Crystal I to Masters II offers the best gold and elixir loot for active TH11 farmers. Dark elixir is best farmed in Champions league."
+      },
+      {
+        "question": "How do I protect against Electro Dragon farming attacks at TH11?",
+        "answer": "Spread your Air Defenses so they cannot all be hit by 2-3 lightning spells. This is the most effective counter."
+      }
+    ],
+    "tags": ["th11", "farming", "grand-warden", "eagle-artillery"],
+    "createdAt": "2024-04-12"
+  }
+]
