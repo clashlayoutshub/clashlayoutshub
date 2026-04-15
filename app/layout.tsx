@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import type { ReactNode } from 'react';
 import { Inter } from 'next/font/google';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -108,6 +109,7 @@ export default function RootLayout({
         <main className="min-h-screen">{children}</main>
         <Footer />
         <CookieBanner />
+        <SpeedInsights />
       </body>
     </html>
   );
