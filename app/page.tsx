@@ -223,37 +223,6 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Category Navigation */}
-      <section className="py-16 bg-brand-card border-y border-brand-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-brand-text mb-4 text-center">
-            Browse by Base Type
-          </h2>
-          <p className="text-brand-muted text-center mb-10 max-w-2xl mx-auto">
-            Choose from our collection of proven base layouts for every playstyle
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            {categoryCards.map((cat) => (
-              <Link
-                key={cat.title}
-                href={cat.href}
-                className={`group relative rounded-3xl p-8 ${cat.bg} border-2 border-transparent hover:border-primary hover:shadow-2xl hover:scale-105 transition-all duration-300 overflow-hidden`}
-              >
-                <div className={`absolute inset-0 bg-gradient-to-br ${cat.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}></div>
-                <div className={`relative inline-flex p-4 rounded-2xl bg-gradient-to-br ${cat.color} text-white mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                  <cat.icon className="w-8 h-8" />
-                </div>
-                <h3 className={`relative font-bold text-xl ${cat.text} mb-2 group-hover:scale-105 transition-transform duration-300`}>{cat.title}</h3>
-                <p className="relative text-sm text-brand-muted leading-relaxed mb-4">{cat.description}</p>
-                <span className={`relative inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/50 backdrop-blur-sm text-sm font-semibold ${cat.text} group-hover:bg-white group-hover:shadow-md transition-all`}>
-                  View bases <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </span>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* TH Quick Nav */}
       <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-12">
