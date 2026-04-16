@@ -42,14 +42,19 @@ export function buildLayoutMeta(layout: {
     `clash layouts`,
   ];
   const canonical = buildCanonicalUrl(`/layout/${layout.id}`);
+  
+  // Catchy action-oriented title for social sharing
+  const ogTitle = `Get this ${prefix}${layout.level} ${catLabel} Link!`;
+  const ogDescription = layout.description.slice(0, 160);
+  
   return {
     title: seoTitle,
     description: seoDescription,
     keywords,
     canonical,
     openGraph: {
-      title: seoTitle,
-      description: seoDescription,
+      title: ogTitle,
+      description: ogDescription,
       url: canonical,
       siteName: SITE_NAME,
       type: 'website' as const,
@@ -57,8 +62,8 @@ export function buildLayoutMeta(layout: {
     },
     twitter: {
       card: 'summary_large_image' as const,
-      title: seoTitle,
-      description: seoDescription,
+      title: ogTitle,
+      description: ogDescription,
       images: layout.image ? [layout.image] : [],
     },
   };
@@ -84,14 +89,19 @@ export function buildBlogMeta(blog: {
     'clash layouts',
   ];
   const canonical = buildCanonicalUrl(`/blog/${blog.slug}`);
+  
+  // Catchy action-oriented title for social sharing
+  const ogTitle = `Read: ${blog.title}`;
+  const ogDescription = seoDescription;
+  
   return {
     title: seoTitle,
     description: seoDescription,
     keywords,
     canonical,
     openGraph: {
-      title: seoTitle,
-      description: seoDescription,
+      title: ogTitle,
+      description: ogDescription,
       url: canonical,
       siteName: SITE_NAME,
       type: 'article' as const,
@@ -102,8 +112,8 @@ export function buildBlogMeta(blog: {
     },
     twitter: {
       card: 'summary_large_image' as const,
-      title: seoTitle,
-      description: seoDescription,
+      title: ogTitle,
+      description: ogDescription,
       images: blog.featuredImage ? [blog.featuredImage] : [],
     },
   };
