@@ -129,7 +129,7 @@ export default async function HomePage() {
               href="/builder-base"
               className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white font-bold px-8 py-4 rounded-2xl hover:bg-white/20 hover:scale-105 transition-all border-2 border-white/30 hover:border-white/50 text-lg"
             >
-              Builder Hall Layouts
+              Browse Builder Hall Layouts
             </Link>
           </div>
           

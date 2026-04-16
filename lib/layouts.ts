@@ -67,6 +67,18 @@ export async function getLayoutsByCategory(
   return (data ?? []).map(mapRow);
 }
 
+export async function getLayoutsByType(
+  type: 'th' | 'bh'
+): Promise<Layout[]> {
+  if (!isSupabaseConfigured) return [];
+  const { data } = await supabase
+    .from('layouts')
+    .select('*')
+    .eq('type', type)
+    .order('created_at', { ascending: false });
+  return (data ?? []).map(mapRow);
+}
+
 export async function getLayoutsByLevelAndCategory(
   type: 'th' | 'bh',
   level: number,
