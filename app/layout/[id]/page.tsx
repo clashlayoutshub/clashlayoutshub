@@ -6,6 +6,7 @@ import { ExternalLink, Shield, Wheat, Trophy, CheckCircle, ChevronRight } from '
 import Breadcrumb from '@/components/Breadcrumb';
 import AdUnit from '@/components/AdUnit';
 import LayoutCard from '@/components/LayoutCard';
+import ShareButton from '@/components/ShareButton';
 import { getLayoutById, getRelatedLayouts, getAllLayouts } from '@/lib/layouts';
 import { buildLayoutMeta, generateBreadcrumbSchema, generateFAQSchema, generateSoftwareApplicationSchema, buildCanonicalUrl } from '@/lib/seo';
 import { getOptimizedImageUrl } from '@/lib/images';
@@ -134,6 +135,15 @@ export default async function LayoutPage({ params }: { params: { id: string } })
                 More {prefix}{layout.level} Bases
                 <ChevronRight className="w-4 h-4" />
               </Link>
+            </div>
+
+            {/* Share Button */}
+            <div className="mb-8">
+              <ShareButton
+                url={buildCanonicalUrl(`/layout/${layout.id}`)}
+                title={layout.title}
+                description={layout.description}
+              />
             </div>
 
             {/* Key Features */}

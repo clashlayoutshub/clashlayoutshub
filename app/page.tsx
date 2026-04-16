@@ -44,7 +44,7 @@ const categoryCards = [
   {
     title: 'War Bases',
     description: 'Anti-3 star designs tested in Clan Wars & CWL',
-    href: '/th14',
+    href: '/war-bases',
     icon: Shield,
     color: 'from-red-500 to-red-600',
     bg: 'bg-red-50',
@@ -53,7 +53,7 @@ const categoryCards = [
   {
     title: 'Farming Bases',
     description: 'Protect dark elixir and resources while offline',
-    href: '/th14',
+    href: '/farming-bases',
     icon: Wheat,
     color: 'from-green-500 to-green-600',
     bg: 'bg-green-50',
@@ -62,7 +62,7 @@ const categoryCards = [
   {
     title: 'Trophy Bases',
     description: 'Push to Legend League with proven layouts',
-    href: '/th15',
+    href: '/trophy-bases',
     icon: Trophy,
     color: 'from-yellow-500 to-yellow-600',
     bg: 'bg-yellow-50',
@@ -235,7 +235,7 @@ export default async function HomePage() {
           {TH_LEVELS.map((level) => (
             <Link
               key={level}
-              href={`/th${level}`}
+              href={`/town-hall/th${level}`}
               className="group relative flex flex-col items-center justify-center py-4 px-2 rounded-2xl bg-brand-card border-2 border-brand-border hover:border-primary hover:bg-gradient-to-br hover:from-blue-50 hover:to-blue-100 hover:shadow-lg hover:scale-105 transition-all duration-300"
             >
               <span className="text-xs text-brand-muted group-hover:text-primary font-semibold mb-1">TH</span>
@@ -254,7 +254,7 @@ export default async function HomePage() {
           {BH_LEVELS.map((level) => (
             <Link
               key={level}
-              href={`/bh${level}`}
+              href={`/builder-base/bh${level}`}
               className="group relative flex flex-col items-center justify-center py-4 px-2 rounded-2xl bg-brand-card border-2 border-brand-border hover:border-primary hover:bg-gradient-to-br hover:from-green-50 hover:to-green-100 hover:shadow-lg hover:scale-105 transition-all duration-300"
             >
               <span className="text-xs text-brand-muted group-hover:text-green-600 font-semibold mb-1">BH</span>
