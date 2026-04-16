@@ -58,8 +58,8 @@ export async function getRecentBlogs(limit = 3): Promise<BlogMeta[]> {
 // Seed data lives in app/api/admin/sync/route.ts — not needed here.
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const _unused: Record<string, string> = {
-  'best-th14-war-base-2024': `
-## Why TH14 War Bases Matter in 2024
+  'best-th14-war-base-2026': `
+## Why TH14 War Bases Matter in 2026
 
 Town Hall 14 introduced the Pet House and powerful new defenses, making base design more critical than ever in Clan Wars. A well-structured TH14 war base can deny 3-star attacks from even top players.
 
@@ -119,7 +119,7 @@ A: No — base links are Town Hall specific. You must use bases designed for you
 A: Change your base every 2-3 war seasons or whenever you notice attackers finding a reliable path.
 
 **Q: What's the best CC troop for TH14 war defense?**
-A: Super Minions or a combination of Headhunters + Valkyrie is highly recommended for 2024 meta.
+A: Super Minions or a combination of Headhunters + Valkyrie is highly recommended for 2026 meta.
 
 **Q: Are these bases anti-air or anti-ground?**
 A: The bases listed are hybrid designs effective against both ground and air attacks.
@@ -127,7 +127,7 @@ A: The bases listed are hybrid designs effective against both ground and air att
 **Q: Do base links expire?**
 A: Base links do not expire, but the meta evolves. Always check the publication date and update regularly.
 `,
-  'best-th13-farming-base-2024': `
+  'best-th13-farming-base-2026': `
 ## Protecting Your Resources at TH13
 
 Town Hall 13 brought the Royal Champion and Giga Inferno upgrades, significantly changing the farming meta. Your base design must now account for powerful new attack strategies targeting dark elixir.
@@ -198,7 +198,7 @@ A: Hybrid bases are generally recommended unless you're in a dedicated loot phas
 **Q: Can I use these bases at TH12?**
 A: The designs are optimized for TH13 buildings. TH12 players should use TH12-specific layouts.
 `,
-  'best-th15-trophy-base-2024': `
+  'best-th15-trophy-base-2026': `
 ## Reaching Legend League with TH15
 
 Town Hall 15 is the current meta pinnacle, featuring the powerful Monolith and Spell Tower. Trophy pushing requires a base that can consistently score 16+ cups per defense cycle.
@@ -235,7 +235,7 @@ Once in Legend League, the game becomes about limiting stars given. This base is
 
 ## Understanding the TH15 Attack Meta
 
-The 2024 TH15 attack meta revolves around:
+The 2026 TH15 attack meta revolves around:
 - **Root Rider Dragon Rider** — Requires spread defenses and Bomb Towers
 - **Super Witch Smash** — Counter with tight compartments
 - **Hybrid** — Anti-hog design with Giant Bombs and Infernos
@@ -249,7 +249,7 @@ The 2024 TH15 attack meta revolves around:
 
 ## About This Guide
 
-This trophy pushing guide combines knowledge from multiple Legend League players and was validated against real 2024 war data.
+This trophy pushing guide combines knowledge from multiple Legend League players and was validated against real 2026 war data.
 
 ## Frequently Asked Questions
 
@@ -263,7 +263,7 @@ A: Single-target above 4500 cups; multi-target below for farming and hybrid defe
 A: Critical — the Monolith should never be in a position where it can be isolated and taken down before engaging the main army.
 
 **Q: What CC troops are best for Legend League defense?**
-A: Super Witch + Ice Golem combination is highly effective in 2024 meta.
+A: Super Witch + Ice Golem combination is highly effective in 2026 meta.
 
 **Q: How many cups can I realistically hold per day in Legend?**
 A: Expect to hold 40-60% of attacks on a well-designed base, netting you 8 attacks per day at 8 cups each.

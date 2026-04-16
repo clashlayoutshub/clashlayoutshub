@@ -120,13 +120,13 @@ export default async function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link
-              href="/th14"
+              href="/town-hall"
               className="inline-flex items-center gap-2 bg-white text-blue-700 font-bold px-8 py-4 rounded-2xl hover:bg-blue-50 hover:scale-105 transition-all shadow-2xl hover:shadow-blue-500/25 text-lg"
             >
               Browse Town Hall <ArrowRight className="w-5 h-5" />
             </Link>
             <Link
-              href="/bh5"
+              href="/builder-base"
               className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white font-bold px-8 py-4 rounded-2xl hover:bg-white/20 hover:scale-105 transition-all border-2 border-white/30 hover:border-white/50 text-lg"
             >
               Builder Hall Layouts

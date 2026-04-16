@@ -69,11 +69,11 @@ export default async function SegmentPage({ params }: { params: { segment: strin
   const { type, level } = parsed!;
   const layouts = await getLayoutsByLevel(type, level);
   const prefix = type === 'th' ? 'TH' : 'BH';
-  const title = `Best ${prefix}${level} Base Layouts 2024`;
+  const title = `Best ${prefix}${level} Base Layouts 2026`;
   const description =
     type === 'th'
-      ? `Download the best Town Hall ${level} base layouts for 2024. War bases, farming bases, and trophy bases with direct copy links.`
-      : `Download the best Builder Hall ${level} base layouts for 2024. Trophy and hybrid bases with direct copy links.`;
+      ? `Download the best Town Hall ${level} base layouts for 2026. War bases, farming bases, and trophy bases with direct copy links.`
+      : `Download the best Builder Hall ${level} base layouts for 2026. Trophy and hybrid bases with direct copy links.`;
 
   const breadcrumbs = [
     { label: type === 'th' ? 'Town Hall Bases' : 'Builder Base' },

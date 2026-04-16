@@ -19,7 +19,7 @@ interface FormData {
   id: string;
   title: string;
   type: LayoutType;
-  level: string;
+  level: number;
   category: LayoutCategory;
   image: string;
   description: string;
@@ -47,7 +47,7 @@ export default function LayoutForm({ authHeader, onSaved, onClose, showToast, ed
         id:          typeof row.id === 'string' ? row.id : '',
         title:       typeof row.title === 'string' ? row.title : '',
         type:        (row.type === 'th' || row.type === 'bh') ? row.type : 'th',
-        level:       typeof row.level === 'number' ? String(row.level) : '14',
+        level:       typeof row.level === 'number' ? row.level : 14,
         category:    (row.category === 'war' || row.category === 'farming' || row.category === 'trophy') ? row.category : 'war',
         image:       (row.image ?? '') as string,
         description: typeof row.description === 'string' ? row.description : '',
@@ -63,7 +63,7 @@ export default function LayoutForm({ authHeader, onSaved, onClose, showToast, ed
       id: '',
       title: '',
       type: 'th',
-      level: '14',
+      level: 14,
       category: 'war',
       image: '',
       description: '',
@@ -81,14 +81,14 @@ export default function LayoutForm({ authHeader, onSaved, onClose, showToast, ed
   const [generating, setGenerating] = useState(false);
   const [saving, setSaving]         = useState(false);
 
-  const set = (field: keyof FormData, val: string) =>
+  const set = (field: keyof FormData, val: string | number) =>
     setForm(f => ({ ...f, [field]: val }));
 
   // Reset level when type changes so the value stays valid
   useEffect(() => {
     setForm(f => ({
       ...f,
-      level: f.type === 'bh' ? '9' : '14',
+      level: f.type === 'bh' ? 9 : 14,
     }));
   }, [form.type]);
 
@@ -183,7 +183,7 @@ Return ONLY valid JSON with EXACTLY these fields (no extra keys):
         id:          form.id.trim(),
         title:       form.title.trim(),
         type:        form.type,
-        level:       parseInt(form.level, 10),
+        level:       form.level,
         category:    form.category,
         image:       form.image.trim(),
         description: form.description.trim(),
@@ -248,8 +248,8 @@ Return ONLY valid JSON with EXACTLY these fields (no extra keys):
           </div>
           <div>
             <label className={LABEL}>Level</label>
-            <select value={form.level} onChange={e => set('level', e.target.value)} className={`${SELECT} w-24`}>
-              {levels.map(l => <option key={l} value={String(l)}>{l}</option>)}
+            <select value={form.level} onChange={e => set('level', parseInt(e.target.value, 10))} className={`${SELECT} w-24`}>
+              {levels.map(l => <option key={l} value={l}>{l}</option>)}
             </select>
           </div>
           <div>
