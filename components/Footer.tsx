@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Swords, Youtube } from 'lucide-react';
+import { Swords, Twitter } from 'lucide-react';
 
 const TH_LEVELS = [9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
 const BH_LEVELS = [5, 6, 7, 8, 9, 10];
@@ -37,25 +37,16 @@ export default function Footer() {
             {/* Social Icons */}
             <div className="flex items-center gap-2">
               <a
-                href="https://www.facebook.com/clashlayoutshub"
+                href="https://x.com/ClashLayoutsHub"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-lg bg-gray-800 text-gray-400 hover:text-[#1877F2] hover:bg-gray-700 transition-all hover:scale-110"
-                aria-label="Facebook"
+                className="p-2 rounded-lg bg-gray-800 text-gray-400 hover:text-neutral-900 hover:bg-gray-700 transition-all hover:scale-110"
+                aria-label="Twitter / X"
               >
-                <FacebookIcon className="w-5 h-5" />
+                <Twitter className="w-5 h-5" />
               </a>
               <a
-                href="https://www.youtube.com/@clashlayoutshub"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 rounded-lg bg-gray-800 text-gray-400 hover:text-[#FF0000] hover:bg-gray-700 transition-all hover:scale-110"
-                aria-label="YouTube"
-              >
-                <Youtube className="w-5 h-5" />
-              </a>
-              <a
-                href="https://discord.gg/clashlayoutshub"
+                href="https://discord.gg/Z9jpQyKEdw"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 rounded-lg bg-gray-800 text-gray-400 hover:text-[#5865F2] hover:bg-gray-700 transition-all hover:scale-110"

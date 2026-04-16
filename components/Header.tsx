@@ -181,37 +181,6 @@ export default function Header() {
             >
               <Search className="w-4.5 h-4.5" />
             </button>
-
-            {/* Social Icons */}
-            <div className="flex items-center gap-1.5 ml-2">
-              <a
-                href="https://www.facebook.com/clashlayoutshub"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2.5 rounded-xl text-brand-muted hover:bg-blue-50 hover:text-[#1877F2] transition-all hover:scale-110"
-                aria-label="Facebook"
-              >
-                <FacebookIcon className="w-4.5 h-4.5" />
-              </a>
-              <a
-                href="https://www.youtube.com/@clashlayoutshub"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2.5 rounded-xl text-brand-muted hover:bg-blue-50 hover:text-[#FF0000] transition-all hover:scale-110"
-                aria-label="YouTube"
-              >
-                <Youtube className="w-4.5 h-4.5" />
-              </a>
-              <a
-                href="https://discord.gg/clashlayoutshub"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2.5 rounded-xl text-brand-muted hover:bg-blue-50 hover:text-[#5865F2] transition-all hover:scale-110"
-                aria-label="Discord"
-              >
-                <DiscordIcon className="w-4.5 h-4.5" />
-              </a>
-            </div>
           </nav>
 
           {/* Mobile menu toggle */}
