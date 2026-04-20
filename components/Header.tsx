@@ -173,14 +173,6 @@ export default function Header() {
               </div>
             </div>
 
-            {/* Search Button */}
-            <button
-              onClick={toggleSearch}
-              className="p-2.5 rounded-xl text-brand-muted hover:bg-blue-50 hover:text-primary transition-all"
-              aria-label="Search"
-            >
-              <Search className="w-4.5 h-4.5" />
-            </button>
           </nav>
 
           {/* Mobile menu toggle */}
@@ -193,26 +185,6 @@ export default function Header() {
           </button>
         </div>
       </div>
-
-      {/* ── Desktop Search Bar ── */}
-      {searchOpen && (
-        <div className="hidden lg:block border-t border-brand-border bg-white px-4 py-3 animate-fade-in">
-          <div className="max-w-7xl mx-auto">
-            <div className="relative max-w-md mx-auto">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-brand-muted pointer-events-none" />
-              <input
-                type="search"
-                placeholder="Search bases, TH levels, blog posts…"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                onKeyDown={handleSearch}
-                autoFocus
-                className="w-full pl-9 pr-4 py-2.5 rounded-xl border border-brand-border bg-gray-50 text-sm text-brand-text placeholder:text-brand-muted focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all"
-              />
-            </div>
-          </div>
-        </div>
-      )}
 
       {/* ── Mobile Menu ── */}
       {mobileOpen && (
