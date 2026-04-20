@@ -6,6 +6,7 @@ import { Lock, LogOut, RefreshCw, Trash2, Plus, Eye, Database, BookOpen, LayoutG
 import Link from 'next/link';
 import BlogForm from './BlogForm';
 import LayoutForm from './LayoutForm';
+import BulkImport from '@/components/BulkImport';
 
 type Tab = 'layouts' | 'blogs' | 'sync';
 
@@ -58,6 +59,7 @@ export default function AdminLitePage() {
   const [toast, setToast] = useState<{ msg: string; ok: boolean } | null>(null);
 
   const [showAddLayout, setShowAddLayout] = useState(false);
+  const [showBulkImport, setShowBulkImport] = useState(false);
   const [showAddBlog, setShowAddBlog] = useState(false);
   const [editLayout, setEditLayout] = useState<Record<string, unknown> | null>(null);
   const [editBlog, setEditBlog] = useState<Record<string, unknown> | null>(null);
@@ -296,12 +298,26 @@ export default function AdminLitePage() {
               <button onClick={fetchLayouts} className="flex items-center gap-1.5 px-3 py-1.5 text-sm text-brand-muted border border-brand-border rounded-lg hover:bg-gray-50 transition-all">
                 <RefreshCw className="w-3.5 h-3.5" /> Refresh
               </button>
-              <button onClick={() => { setEditLayout(null); setShowAddLayout(prev => !prev); }}
+              <button onClick={() => { setShowBulkImport(prev => !prev); setShowAddLayout(false); }}
+                className="flex items-center gap-1.5 px-3 py-1.5 text-sm text-brand-muted border border-brand-border rounded-lg hover:bg-gray-50 transition-all">
+                <Database className="w-3.5 h-3.5" /> {showBulkImport ? 'Cancel Import' : 'Bulk Import'}
+              </button>
+              <button onClick={() => { setEditLayout(null); setShowAddLayout(prev => !prev); setShowBulkImport(false); }}
                 className="flex items-center gap-1.5 px-3 py-1.5 text-sm bg-primary text-white rounded-lg hover:bg-primary-dark transition-all">
                 <Plus className="w-3.5 h-3.5" /> {showAddLayout ? 'Cancel' : 'Add Layout'}
               </button>
             </div>
           </div>
+
+          {showBulkImport && (
+            <BulkImport
+              onImportComplete={() => {
+                fetchLayouts();
+                setShowBulkImport(false);
+                showToast('Bulk import completed successfully', true);
+              }}
+            />
+          )}
 
           {showAddLayout && (
             <LayoutForm
