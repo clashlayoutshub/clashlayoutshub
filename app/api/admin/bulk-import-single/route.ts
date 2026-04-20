@@ -64,12 +64,23 @@ WRITING RULES — follow every rule exactly:
 `;
 }
 
-function buildLayoutPrompt(type: string, level: number, category: string): string {
-  return `${buildSystemPrefix()}Generate content for a Clash of Clans ${type === 'th' ? 'Town Hall' : 'Builder Hall'} ${level} ${category} base layout.
+function buildLayoutPrompt(type: string, level: number, category: string, title?: string): string {
+  const categoryInstruction = category 
+    ? `category: ${category}`
+    : `IMPORTANT: Determine the most appropriate category for this base based on its title and characteristics. Choose from: war, farming, trophy, hybrid, or progress. Return your determined category in the "category" field.`;
+
+  const titleInstruction = title 
+    ? `Base title: ${title}`
+    : '';
+
+  return `${buildSystemPrefix()}Generate content for a Clash of Clans ${type === 'th' ? 'Town Hall' : 'Builder Hall'} ${level} base layout.
+
+${titleInstruction ? titleInstruction + '\n' : ''}
+${categoryInstruction}
 
 Return ONLY valid JSON with these exact fields:
 {
-  "title": "keyword-rich title, max 60 chars",
+  "title": "keyword-rich title, max 60 chars"${category ? '' : ',\n  "category": "determined category (war, farming, trophy, hybrid, or progress)'},
   "description": "meta description, max 155 chars",
   "keyFeatures": ["feature 1", "feature 2", "feature 3", "feature 4", "feature 5"],
   "howToUse": ["step 1", "step 2", "step 3", "step 4", "step 5"],
@@ -85,13 +96,13 @@ Return ONLY valid JSON with these exact fields:
 }
 
 // ─── AI Content Generation ─────────────────────────────────────────────────────
-async function generateAIContent(type: string, level: number, category: string): Promise<any> {
+async function generateAIContent(type: string, level: number, category: string, title?: string): Promise<any> {
   const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) {
     throw new Error('GEMINI_API_KEY not configured');
   }
 
-  const contentPrompt = buildLayoutPrompt(type, level, category);
+  const contentPrompt = buildLayoutPrompt(type, level, category, title);
 
   const res = await fetch(
     `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`,
@@ -181,12 +192,13 @@ async function saveLayoutToSupabase(layoutData: any): Promise<string> {
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { type, level, category, baseLink, image } = body as {
+    const { type, level, category, baseLink, image, title } = body as {
       type?: string;
       level?: number;
       category?: string;
       baseLink?: string;
       image?: string;
+      title?: string;
     };
 
     if (!level || isNaN(level)) {
@@ -194,18 +206,21 @@ export async function POST(req: NextRequest) {
     }
 
     const layoutType = type || 'th';
-    const layoutCategory = category || 'war';
+    const layoutCategory = category || '';
 
-    // Generate AI content
-    const aiContent = await generateAIContent(layoutType, level, layoutCategory);
+    // Generate AI content - pass title if category is empty for detection
+    const aiContent = await generateAIContent(layoutType, level, layoutCategory, title);
+
+    // Use AI-generated category if it was determined
+    const finalCategory = aiContent.category || layoutCategory || 'war';
 
     // Save to Supabase
     const layoutData = {
-      title: aiContent.title || `${layoutType.toUpperCase()}${level} ${layoutCategory} base`,
+      title: aiContent.title || `${layoutType.toUpperCase()}${level} ${finalCategory} base`,
       description: aiContent.description || '',
       level,
       type: layoutType,
-      category: layoutCategory,
+      category: finalCategory,
       image: image || '',
       base_link: baseLink || '',
       keyFeatures: aiContent.keyFeatures || [],
@@ -225,7 +240,7 @@ export async function POST(req: NextRequest) {
         title: layoutData.title,
         type: layoutType,
         level,
-        category: layoutCategory
+        category: finalCategory
       }
     });
   } catch (err) {

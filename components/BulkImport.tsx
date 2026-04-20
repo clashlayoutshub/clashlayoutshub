@@ -11,6 +11,7 @@ interface LayoutRow {
   type: string;
   level: number;
   category: string;
+  title?: string;
   baseLink?: string;
   image?: string;
 }
@@ -97,7 +98,8 @@ export default function BulkImport({ onImportComplete }: BulkImportProps) {
       rows.push({
         type: row.type || 'th',
         level: parseInt(row.level || row.townhall || row.builderhall),
-        category: row.category || 'war',
+        category: row.category || '',
+        title: row.title || '',
         baseLink: row.baselink || row.link || '',
         image: row.image || row.imageurl || '',
       });
@@ -121,6 +123,7 @@ export default function BulkImport({ onImportComplete }: BulkImportProps) {
           type: layout.type,
           level: layout.level,
           category: layout.category,
+          title: layout.title,
           baseLink: layout.baseLink,
           image: layout.image,
         }),
@@ -393,11 +396,11 @@ export default function BulkImport({ onImportComplete }: BulkImportProps) {
           <div className="text-xs text-brand-muted border-t border-brand-border pt-4">
             <p className="font-semibold mb-2">CSV Format:</p>
             <code className="block bg-gray-100 p-2 rounded text-xs">
-              type,level,category,baseLink,imageUrl
+              type,level,category,title,baseLink,imageUrl
             </code>
-            <p className="mt-2">Example: th,14,war,https://link.com,https://image.com</p>
+            <p className="mt-2">Example: th,14,,Anti-3 Star Design,https://link.com,https://image.com</p>
             <p className="mt-2 text-amber-600">
-              <strong>Note:</strong> Processes exactly 1 layout per minute to avoid API limits.
+              <strong>Note:</strong> If category is empty, Gemini will auto-detect it from the title. Processes exactly 1 layout per minute to avoid API limits.
             </p>
           </div>
         )}
